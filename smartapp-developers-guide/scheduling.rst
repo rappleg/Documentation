@@ -195,6 +195,7 @@ As such, these methods should be preferred over cron expressions when available.
 
 The currently available methods are:
 
+- :ref:`smartapp_run_every_1_minute`
 - :ref:`smartapp_run_every_5_minutes`
 - :ref:`smartapp_run_every_10_minutes`
 - :ref:`smartapp_run_every_15_minutes`

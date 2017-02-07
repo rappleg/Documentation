@@ -1246,6 +1246,52 @@ Executes a specified ``handlerMethod`` after ``delaySeconds`` have elapsed.
 
 ----
 
+.. _smartapp_run_every_1_minute:
+
+runEvery1Minute()
+------------------
+
+Creates a recurring schedule that executes the specified ``handlerMethod`` every minute.
+Using this method will pick a random start time in the next minute, and run every minute after that.
+
+**Signature:**
+    ``void runEvery1Minute(handlerMethod[, options])``
+
+.. tip::
+
+    This is preferred over using ``schedule(cronExpression, handlerMethod)`` for a regular schedule like this because with a cron expression all installations of a SmartApp will execute at the same time. With this method, the executions will be spread out over the 1 minute period.
+
+**Parameters:**
+    ``handlerMethod`` - The method to call every minute. Can be the name of the method as a string, or a reference to the method.
+
+    ``options`` *(optional)* - A map of parameters, with the following keys supported:
+
+    ========= ====================== ===========
+    Key       Possible values        Description
+    ========= ====================== ===========
+    data      A map of data          A map of data that will be passed to the handler method.
+    ========= ====================== ===========
+
+**Returns:**
+    void
+
+**Example:**
+
+.. code-block:: groovy
+
+    runEvery1Minute(handlerMethod1)
+    runEvery1Minute(handlerMethod2, [data: [key1: 'val1']])
+
+    def handlerMethod1() {
+        log.debug "handlerMethod1"
+    }
+
+    def handlerMethod2(data) {
+        log.debug "handlerMethod2, data: $data"
+    }
+
+----
+
 .. _smartapp_run_every_5_minutes:
 
 runEvery5Minutes()
@@ -1691,9 +1737,9 @@ Sends a command to the Hub, with the details of the command encapsulated within 
     ``void sendHubCommand(List<HubAction> actions, delay)``
 
 **Parameters:**
-    ``HubAction action`` - A HubAction object 
-    
-    ``List<HubAction> actions`` - A list of HubAction objects 
+    ``HubAction action`` - A HubAction object
+
+    ``List<HubAction> actions`` - A list of HubAction objects
 
 
     ``delay`` - An integer number representing milliseconds. This is the delay between commands when a list of HubAction objects are sent using ``List<HubAction> actions`` parameter. The default value of delay is 1000.
@@ -1705,7 +1751,7 @@ Sends a command to the Hub, with the details of the command encapsulated within 
     During the discovery phase of a LAN-connected device the following discovery command can be sent to the Hub.
 
 .. code-block:: groovy
-    
+
     // Send a single HubAction command to the Hub
     void ssdpDiscover() {
         sendHubCommand(new physicalgraph.device.HubAction("lan discovery urn:schemas-upnp-org:device:ZonePlayer:1", physicalgraph.device.Protocol.LAN))
@@ -1718,7 +1764,7 @@ Sends a command to the Hub, with the details of the command encapsulated within 
         actions.add(new physicalgraph.device.HubAction("lan discovery urn:samsung.com:device:RemoteControlReceiver:1", physicalgraph.device.Protocol.LAN))
         sendHubCommand(actions, 3000)
     }
-    
+
 ----
 
 sendLocationEvent()
