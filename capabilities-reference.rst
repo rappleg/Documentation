@@ -3,6 +3,12 @@
 Capabilities Reference
 ======================
 
+.. warning::
+
+    The Capabilities reference documentation here is no longer being maintained.
+
+    For the current Capabilities documentation, please refer to the `SmartThings developer portal <https://smartthings.developer.samsung.com/develop/api-ref/capabilities.html>`_.
+
 .. only:: latex or epub
 
     See our `online documentation <http://docs.smartthings.com/en/latest/capabilities-reference.html>`_ for complete and updated capabilities documentation.
