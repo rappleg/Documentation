@@ -53,21 +53,10 @@ help:
 clean:
 	rm -rf $(BUILDDIR)/*
 
-html: # download_capabilities extract_capabilities
+html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
-
-# download_capabilities:
-# 	@echo
-# 	@echo "Downloading $(CAPABILITIES_ZIP) from $(CAPABILITIES_ZIP_URL)"
-# 	curl -s -S -L -f $(CAPABILITIES_ZIP_URL) -z $(STATICDIR)/$(CAPABILITIES_ZIP) -o $(STATICDIR)/$(CAPABILITIES_ZIP).tmp && mv -f $(STATICDIR)/$(CAPABILITIES_ZIP).tmp $(STATICDIR)/$(CAPABILITIES_ZIP) 2>/dev/null || rm -f $(STATICDIR)/$(CAPABILITIES_ZIP).tmp
-#
-# extract_capabilities:
-# 	@echo
-# 	@echo "Extracting $(CAPABILITIES_ZIP) into $(STATICDIR)"
-# 	unzip -o $(STATICDIR)/$(CAPABILITIES_ZIP) -d $(STATICDIR)/capabilities 1>/dev/null
-# 	@echo
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
