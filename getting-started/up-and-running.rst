@@ -29,7 +29,7 @@ The :ref:`tools_ide` guide discusses the developer tools in more detail, but for
 Account management
 ^^^^^^^^^^^^^^^^^^
 
-You can use the tools available to view and manage your Locations, Hubs, and Devices, as well as view a live log of your SmartThings.
+You can use the tools available to view and manage the Locations, Hubs, and Devices, as well as view a live log for locations where you are listed as the owner.
 
 IDE and Simulator
 ^^^^^^^^^^^^^^^^^
