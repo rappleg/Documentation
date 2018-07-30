@@ -16,7 +16,7 @@ Register
 
 If you already have the SmartThings mobile app, you can access the developer IDE at https://graph.api.smartthings.com, using the same email and password.
 
-If you don't have the mobile app, you can register for an account by visiting https://graph.api.smartthings.com/register.
+If you don't have the mobile app, you can register for an account by visiting https://account.samsung.com/account/signUp.do.
 You can then download the free SmartThings mobile app for `iOS <https://geo.itunes.apple.com/us/app/smartthings-mobile/id590800740?mt=8>`__, `Android <https://play.google.com/store/apps/details?id=com.smartthings.android>`__, or `Windows <https://www.microsoft.com/en-us/store/apps/smartthings-mobile/9wzdncrdszmq>`__.
 
 ----
